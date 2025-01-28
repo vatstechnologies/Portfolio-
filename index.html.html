@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anurag's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2, #ff6e7f);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: yellow;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    #hero {
+      padding: 100px 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    footer {
+      padding: 20px;
+      background-color: black;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anurag's Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education details">Educational Details</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Hi, I'm Anurag</h2>
+    <p> AI/ML Developer | Full-Stack Software Architect | Embedded Software Developer</p>
+    <button class="button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get in Touch</button>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am passionate about AI/ML, web development, Game development, and creating impactful software solutions. I specialize in building interactive Softwares & Machine Learning Models .</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Programming Languages</h3>
+        <p>Python, Java, C++</p>
+      </div>
+      <div class="card">
+        <h3>ML Frameworks</h3>
+        <p>Tensorflow , Pytorch , Sci Kit Learn , Hugging Face Transformer , ONNX</p>
+      </div>
+      <div class="card">
+        <h3>Natural Language Processing</h3>
+      </div>
+      <div class="card">
+        <h3>Computer Vision</h3>
+      </div>
+      <div class="card">
+        <h3>Microcontrollers</h3>
+        <p>Raspberry Pi , Arduino , IoT</p>
+      </div>
+      <div class="card">
+        <h3>VLSI , FPGA , SoC Architecture</h3>
+        <p>RTOS , FirmWare development</p>
+      </div>
+      <div class="card">
+        <h3>AR , VR , MR Based Game development</h3>
+        <p>Unity , GoDot , Blender , ZBrush ,OpenXR , C# </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+      <div class="education-item">
+        <h3>Holy Child Public School, Faridabad</h3>
+        <p><strong>10th and 12th:</strong> Achieved 80%</p>
+      </div>
+      <div class="education-item">
+        <h3>Bachelor of Technology</h3>
+        <p><strong>Electrical Engineering:</strong> MDU Rohtak</p>
+        <p><strong>Batch:</strong> 2021 - 2025</p>
+        <p><strong>CGPA:</strong> 7.4 (3.0 GPA)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>AI-Powered Chatbot</h3>
+        <p>An NLP-based chatbot for seamless customer interaction.</p>
+      </div>
+      <div class="card">
+        <h3>Object Detection System</h3>
+        <p>A computer vision model to detect objects in real-time.</p>
+      </div>
+      <div class="card">
+        <h3>Algorithm Visualizer</h3>
+        <p>Web application to visualize data structures and algorithms step by step.</p>
+      </div>
+      <div class="card">
+        <h3>Autonomous Driving Simulation</h3>
+        <p>A computer vision-based system simulating real-world driving scenarios.</p>
+      </div>
+      <div class="card">
+        <h3>Retail Inventory Predictor</h3>
+        <p>Uses machine learning to optimize stock management in retail environments</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="handleForm(event)">
+      <input type="text" placeholder="Name" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <textarea placeholder="Message" required></textarea><br>
+      <button class="button" type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anurag's Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function handleForm(event) {
+      event.preventDefault();
+      alert("Thank you for reaching out! I'll get back to you soon.");
+    }
+  </script>
+</body>
+</html>
